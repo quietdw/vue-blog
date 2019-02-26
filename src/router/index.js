@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/pages/HelloWorld'
+import Index from '@/pages/Index/template.vue'
+import User from '@/pages/User/template.vue'
+import Register from '@/pages/Register/template.vue'
+import Edit from '@/pages/Edit/template.vue'
+import My from '@/pages/My/template.vue'
+import Detail from '@/pages/Detail/template.vue'
+import Create from '@/pages/Create/template.vue'
 import Login from '@/pages/Login/template.vue'
 
 Vue.use(Router)
@@ -9,8 +15,35 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      component: Index
+    },
+    {
+      path: '/Index',
+      component: Index
+    },
+    {
+      path: '/User',
+      component: User
+    },
+    {
+      path: '/Register',
+      component: Register
+    },
+    {
+      path: '/Edit',
+      component: Edit
+    },
+    {
+      path: '/My',
+      component: My
+    },
+    {
+      path: '/Detail',
+      component: Detail
+    },
+    {
+      path: '/Create',
+      component: Create
     },
     {
       path: '/login',
