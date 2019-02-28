@@ -2,9 +2,9 @@ import request from '@/helpers/request.js'
 import auth from '@/api/auth.js'
 import blog from '@/api/blog.js'
 
-window.request = request //方便调试
-window.auth = auth //方便调试
-window.blog = blog //方便调试
+ window.request = request //方便调试
+ window.auth = auth //方便调试
+ window.blog = blog //方便调试
 
 export default {
   methods: {
