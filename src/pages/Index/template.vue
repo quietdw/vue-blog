@@ -1,7 +1,10 @@
 <template>
   <div id="index">
-    首页
-    <p>1</p>
+    <h2>首页</h2>
+    <div>
+  <el-button @click="open">默认按钮</el-button>
+  <el-button type="button" @click="alert">点击打开 Message Box</el-button>
+    </div>
   </div>
 </template>
 
