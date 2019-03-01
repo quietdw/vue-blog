@@ -8,16 +8,16 @@ const URL = {
 }
 
 export default {
-  register({
+  register ({
     username,
     password
   }) {
     return request(URL.REGISTER, 'POST', {
       username,
       password
-    }) //es6的写法
+    }) // es6的写法
   },
-  login({
+  login ({
     username,
     password
   }) {
@@ -26,10 +26,10 @@ export default {
       password
     })
   },
-  logout() {
+  logout () {
     return request(URL.LOGOUT, 'GET')
   },
-  getInfo() {
+  getInfo () {
     return request(URL.GET_INFO, 'GET')
   }
 }

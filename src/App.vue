@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header id = "header"></Header>
-    <main id = "main">
+    <Header id="header"></Header>
+    <main id="main">
       <router-view/>
     </main>
     <Footer id="footer"></Footer>
@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import Header from  '@/components/header.vue'
-import Footer from  '@/components/footer.vue'
+import Header from "@/components/header.vue"
+import Footer from "@/components/footer.vue"
 export default {
-  name: 'App',
-  components:{
+  name: "App",
+  components: {
     Header,
     Footer
   }
@@ -21,35 +21,44 @@ export default {
 </script>
 
 <style lang='less'>
-@import './assets/common.less';
+@import "./assets/common.less";
+
 #app {
   display: grid;
   grid-template-columns: 12% auto 12%;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
+  grid-template-areas:
     "header  header header"
     ".       main   ."
     "footer footer footer";
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#header {
+  grid-area: header;
+  padding-left: 12%;
+  padding-right: 12%;
   text-align: center;
 }
-#header{
-  grid-area: header;
-  padding-left:12%;padding-right:12%;
-}
-#main{
+#main {
   grid-area: main;
 }
-#footer{
+#footer {
   grid-area: footer;
-  padding-left:12%;padding-right:12%;
+  padding-left: 12%;
+  padding-right: 12%;
 }
 
 @media (max-width: 768px) {
-  #app{grid-template-columns: 10px auto 10px;}
-  #header,#footer{padding-left:12%;padding-right:12%;}
+  #app {
+    grid-template-columns: 10px auto 10px;
+  }
+  #header,
+  #footer {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
 }
 </style>
 

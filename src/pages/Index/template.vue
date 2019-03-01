@@ -1,10 +1,37 @@
 <template>
   <div id="index">
-    <h2>首页</h2>
-    <div>
-  <el-button @click="open">默认按钮</el-button>
-  <el-button type="button" @click="alert">点击打开 Message Box</el-button>
-    </div>
+    <section class="bolg-post">
+      <div class="item">
+        <figure class="avatar">
+          <img src="https://jiangnana.fun/assets/images/avatar.jpg" alt="头像">
+          <figcaption>用户名</figcaption>
+        </figure>
+        <h3>标题标题标题标题标题标题
+          <span>几天前</span>
+        </h3>
+        <p>简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介.....</p>
+      </div>
+      <div class="item">
+        <figure class="avatar">
+          <img src="https://jiangnana.fun/assets/images/avatar.jpg" alt="头像">
+          <figcaption>用户名</figcaption>
+        </figure>
+        <h3>标题标题标题标题标题标题
+          <span>几天前</span>
+        </h3>
+        <p>简介简介简介简介简介简介简介简介简介简介简介简介简介简介.....</p>
+      </div>
+      <div class="item">
+        <figure class="avatar">
+          <img src="https://jiangnana.fun/assets/images/avatar.jpg" alt="头像">
+          <figcaption>用户名</figcaption>
+        </figure>
+        <h3>标题标题标题标题标题标题
+          <span>几天前</span>
+        </h3>
+        <p>简介简介简介简介简介简介简介简介简介简介简介简介简介简介.....</p>
+      </div>
+    </section>
   </div>
 </template>
 

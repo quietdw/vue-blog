@@ -1,3 +1,30 @@
-body{padding: 0;margin: 0;}
-html,body,#app{height: 100%;}
-*{transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;}
+*{padding: 0;margin: 0;}
+*{box-sizing: border-box;}
+*::before,*::after{box-sizing: border-box;}
+ul,ol,li{list-style: none}
+a{color: inherit;text-decoration: none}
+input{font: inherit}
+h1,h2,h3,h4,h5,h6{ font-weight: normal; }
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+* {
+  transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}

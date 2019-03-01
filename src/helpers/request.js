@@ -7,7 +7,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 axios.defaults.baseURL = 'http://blog-server.hunger-valley.com'
 axios.defaults.withCredentials = true
 
-export default function request(url, type = 'GET', data = {}) {
+export default function request (url, type = 'GET', data = {}) {
   return new Promise((resolve, reject) => {
     let option = {
       url,
@@ -26,9 +26,9 @@ export default function request(url, type = 'GET', data = {}) {
         Message.error(res.data.msg)
         reject(res.data)
       }
-    }).catch(err => {
+    }).catch((error) => {
       Message.error('网络异常')
-      reject('网络异常')
+      reject(error)
     })
   })
 }

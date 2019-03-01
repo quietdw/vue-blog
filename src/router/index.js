@@ -12,42 +12,41 @@ import Login from '@/pages/Login/template.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      component: Index
-    },
-    {
-      path: '/Index',
-      component: Index
-    },
-    {
-      path: '/User',
-      component: User
-    },
-    {
-      path: '/Register',
-      component: Register
-    },
-    {
-      path: '/Edit',
-      component: Edit
-    },
-    {
-      path: '/My',
-      component: My
-    },
-    {
-      path: '/Detail',
-      component: Detail
-    },
-    {
-      path: '/Create',
-      component: Create
-    },
-    {
-      path: '/login',
-      component: Login
-    }
+  routes: [{
+    path: '/',
+    component: Index
+  },
+  {
+    path: '/Index',
+    component: Index
+  },
+  {
+    path: '/User',
+    component: User
+  },
+  {
+    path: '/Register',
+    component: Register
+  },
+  {
+    path: '/Edit',
+    component: Edit
+  },
+  {
+    path: '/My',
+    component: My
+  },
+  {
+    path: '/Detail',
+    component: Detail
+  },
+  {
+    path: '/Create',
+    component: Create
+  },
+  {
+    path: '/login',
+    component: Login
+  }
   ]
 })
