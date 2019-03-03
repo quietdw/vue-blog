@@ -4,27 +4,62 @@
             <h1>Let's share</h1>
             <p>精品博客汇聚</p>
             <div class="btns">
-                <el-button>登录</el-button>
-                <el-button>注册</el-button>
+                <router-link to="login"><el-button>登录</el-button></router-link>
+                <router-link to="register"><el-button>注册</el-button></router-link>
             </div>
         </template>
-        <template v-else>
+        <template v-if="isLogin">
             <h1>Let's share</h1>
             <span>
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-edit1"></use>
                 </svg>
             </span>
-            <img src="https://jiangnana.fun/assets/images/avatar.jpg" alt="我是图片">
+            <div class="user">
+                <img :src="user.avatar" :alt="user.username">
+                <ul>
+                    <li><router-link to="my">我的</router-link></li>
+                    <li><a href="#" @click="onLogout">注销</a></li>
+                </ul>
+            </div>
         </template>
     </header>
 </template>
 
 <script>
+/* eslint-disable */ 
+//获取vuex里的数据
+import auth from '../api/auth'
+import {mapGetters, mapActions} from 'vuex'
+
+window.auth = auth
+
 export default {
     data () {
-        return {isLogin:false}
+        return {}
+    },
+    created(){ // 生命周期，数据OK，模板还未渲染，比如ajax获取数据
+        this.checkLogin()
     }
+    ,
+    computed:{
+         ...mapGetters([
+            'user',
+            'isLogin'
+         ])
+    }
+    ,
+    methods:{
+        ...mapActions([
+            'checkLogin',
+            'logout'
+        ]),
+        onLogout(){
+            console.log(this)
+            this.logout()
+        }
+    },
+
 }
 </script>
 
@@ -49,13 +84,26 @@ header.login {
     align-items:center;
     justify-content:flex-end;
     padding-bottom: 0px;
-    h1 {justify-self: start;}
+    h1 {flex-grow: 1;text-align: left;}
     span {color: #fff;}
-    img {width: 40px;margin: 10px;}
     svg {
         width: 30px;
         height: 30px;
         fill: aliceblue;
+    }
+    .user {
+    position: relative;
+    img {width: 40px;margin: 10px;}
+    ul{
+        position: absolute;
+        width: 100%;
+        left: 100%;
+        top: 10px;
+        li{
+            color: #fff;
+
+        }
+    }
     }
 }
 </style>

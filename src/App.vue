@@ -9,6 +9,7 @@
 </template>
 
 <script>
+/* eslint-disable no-new */
 import Header from "@/components/header.vue"
 import Footer from "@/components/footer.vue"
 export default {
@@ -61,4 +62,3 @@ export default {
   }
 }
 </style>
-
