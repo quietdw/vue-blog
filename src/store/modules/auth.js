@@ -30,10 +30,10 @@ const actions= {
     },
     // 写法和上面的形式一样
     async register({commit},{username,password}) {
-            let res = await auth.register((username,password)) // then 的结果
-            commit('setUser',{user:res.data})
-            commit('setLogin',{isLogin:true})
-            return res.data
+        let res = await auth.register({username,password}) // then 的结果
+        commit('setUser',{user:res.data})
+        commit('setLogin',{isLogin:true})
+        return res.data
     },
 
     async logout({commit}){

@@ -55,10 +55,9 @@ export default {
             'logout'
         ]),
         onLogout(){
-            console.log(this)
             this.logout()
         }
-    },
+    }
 
 }
 </script>
@@ -74,10 +73,11 @@ header.nologin {
     color: #fff;
   h1 {padding: 20px 0;}
   p {padding-bottom:  10px;}
-  .btns {margin-top: 20px;}
-  .el-button+.el-button {
-    margin-left: 30px;
-}
+  .btns {margin-top: 20px;
+    .el-button{
+        margin: 20px;
+    }
+  }
 }
 header.login {
     display: flex;
