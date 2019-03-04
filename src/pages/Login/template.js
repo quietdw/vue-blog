@@ -14,7 +14,7 @@ export default {
     onSubmit () {
       this.login({'username': this.username, 'password': this.password})
         .then(() => {
-          this.$router.push({path: '/'}) // 跳转到首页
+          this.$router.push({path: this.$route.query.redirect || '/'}) // 跳转到首页
         })
     }
   }

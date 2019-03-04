@@ -8,13 +8,21 @@ import My from '@/pages/My/template.vue'
 import Detail from '@/pages/Detail/template.vue'
 import Create from '@/pages/Create/template.vue'
 import Login from '@/pages/Login/template.vue'
+import store from '@/store/'
 
 Vue.use(Router)
-
-export default new Router({
+const router = new Router({
   routes: [{
     path: '/',
     component: Index
+  },
+  {
+    path: '/login',
+    component: Login
+  },
+  {
+    path: '/Register',
+    component: Register
   },
   {
     path: '/Index',
@@ -25,28 +33,44 @@ export default new Router({
     component: User
   },
   {
-    path: '/Register',
-    component: Register
-  },
-  {
-    path: '/Edit',
-    component: Edit
+    path: '/Edit/:blogId',
+    component: Edit,
+    meta: {requiresAuth: true}
   },
   {
     path: '/My',
-    component: My
+    component: My,
+    meta: {requiresAuth: true}
   },
   {
-    path: '/Detail',
+    path: '/Detail/:blogId',
     component: Detail
   },
   {
     path: '/Create',
-    component: Create
-  },
-  {
-    path: '/login',
-    component: Login
+    component: Create,
+    meta: {requiresAuth: true}
   }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // this route requires auth, check if logged in
+    // if not, redirect to login page.
+    store.dispatch('checkLogin').then((isLogin) => {
+      if (!isLogin) {
+        next({
+          path: '/login',
+          query: { redirect: to.fullPath }
+        })
+      } else {
+        next()
+      }
+    })
+  } else {
+    next() // 确保一定要调用 next()
+  }
+})
+
+export default router
