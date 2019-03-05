@@ -8,7 +8,7 @@
         </figure>
         <h3>
           {{blog.title}}
-          <span>{{blog.updatedAt}}</span>
+          <span>{{friendlyDate(blog.createdAt)}}</span>
         </h3>
         <p>{{blog.description}}<router-link :to="`detail/${blog.id}`">更多</router-link></p>
         
