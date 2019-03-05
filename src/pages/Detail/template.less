@@ -1,0 +1,45 @@
+@import url(../../assets/base.less);
+
+#detail{
+  .author {
+    display: grid;
+    grid: auto auto / 80px 1fr;
+    padding: 30px 0;
+    border-bottom: 1px solid @textLighterColor;
+    img {
+      grid-column: 1 ;
+      grid-row: 1/ span 2;
+      background:red;
+      width: 100%;
+    }
+    h4 {
+      grid-column: 2 ;
+      grid-row: 1;
+      font-weight: bold;
+      padding: 15px 0 15px 15px;
+
+    }
+    p {
+      grid-column: 2 ;
+      grid-row: 2;
+      color: @themeColor;
+      padding: 10px 0 10px 15px;
+      span {
+        color: @textLighterColor;
+      }
+    }
+  }
+  .description{
+    padding: 30px;
+  }
+  .article{
+      margin: 0 auto;
+      line-height: 1;
+      max-width: 960px;
+      padding: 30px;
+    @import url(../../assets/artical.less);
+    img {
+      width: 100%;
+    }
+  }
+}

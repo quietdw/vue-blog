@@ -1,10 +1,18 @@
 <template>
   <div id="detail">
-    博客详情
+    <div class="author">
+      <img :src="user.avatar" :alt="user.username">
+      <h4>{{title}}</h4>
+      <p>{{user.username}} <span>{{createdAt}}</span></p>
+    </div>
+    <div class="description">
+      {{description}}
+    </div>
+    <div class="article" v-html="marked"></div>
   </div>
 </template>
 
 <script src='./template.js'></script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style src='./template.css'></style>
+<style src='./template.less' lang="less"></style>

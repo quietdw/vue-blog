@@ -45,7 +45,7 @@ export default {
     })
   },
   getDetail (blogId) {
-    return request(URL.GET_DETAIL.replace(':blog', blogId))
+    return request(URL.GET_DETAIL.replace(':blogId', blogId))
   },
   updateBlog ({
     blogId

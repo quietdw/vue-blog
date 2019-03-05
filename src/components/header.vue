@@ -4,8 +4,8 @@
             <h1><router-link to="/">Let's share</router-link></h1>
             <p>精品博客汇聚</p>
             <div class="btns">
-                <router-link to="login"><el-button>登录</el-button></router-link>
-                <router-link to="register"><el-button>注册</el-button></router-link>
+                <router-link to="/login"><el-button>登录</el-button></router-link>
+                <router-link to="/register"><el-button>注册</el-button></router-link>
             </div>
         </template>
         <template v-if="isLogin">
