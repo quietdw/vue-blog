@@ -1,7 +1,7 @@
 <template>
     <header :class="{login:isLogin,nologin:!isLogin}">
         <template v-if="!isLogin">
-            <h1>Let's share</h1>
+            <h1><router-link to="/">Let's share</router-link></h1>
             <p>精品博客汇聚</p>
             <div class="btns">
                 <router-link to="login"><el-button>登录</el-button></router-link>
@@ -9,7 +9,7 @@
             </div>
         </template>
         <template v-if="isLogin">
-            <h1>Let's share</h1>
+            <h1><router-link to="/">Let's share</router-link></h1>
             <span>
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-edit1"></use>
