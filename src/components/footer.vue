@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>@copyright</p>
+        <p>@copyright Jiang OpenSource:github</p>
     </footer>
 </template>
 

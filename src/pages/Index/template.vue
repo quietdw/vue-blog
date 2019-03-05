@@ -1,36 +1,27 @@
 <template>
   <div id="index">
-    <section class="bolg-post">
+    <section class="bolg-post" v-for="blog in blogs">
       <div class="item">
         <figure class="avatar">
-          <img src="https://jiangnana.fun/assets/images/avatar.jpg" alt="头像">
-          <figcaption>用户名</figcaption>
+          <img :src="blog.user.avatar" :alt="blog.user.username">
+          <figcaption>{{blog.user.username}}</figcaption>
         </figure>
-        <h3>标题标题标题标题标题标题
-          <span>几天前</span>
+        <h3>
+          {{blog.title}}
+          <span>{{blog.updatedAt}}</span>
         </h3>
-        <p>简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介.....</p>
+        <p>{{blog.description}}<router-link :to="`detail/${blog.id}`">更多</router-link></p>
+        
       </div>
-      <div class="item">
-        <figure class="avatar">
-          <img src="https://jiangnana.fun/assets/images/avatar.jpg" alt="头像">
-          <figcaption>用户名</figcaption>
-        </figure>
-        <h3>标题标题标题标题标题标题
-          <span>几天前</span>
-        </h3>
-        <p>简介简介简介简介简介简介简介简介简介简介简介简介简介简介.....</p>
-      </div>
-      <div class="item">
-        <figure class="avatar">
-          <img src="https://jiangnana.fun/assets/images/avatar.jpg" alt="头像">
-          <figcaption>用户名</figcaption>
-        </figure>
-        <h3>标题标题标题标题标题标题
-          <span>几天前</span>
-        </h3>
-        <p>简介简介简介简介简介简介简介简介简介简介简介简介简介简介.....</p>
-      </div>
+    </section>
+    <section class="pagination-container">
+      <el-pagination
+  background
+  layout="prev, pager, next"
+  @current-change="onPageChange"
+  :current-page="currentPage"
+  :total="total">
+</el-pagination>
     </section>
   </div>
 </template>
