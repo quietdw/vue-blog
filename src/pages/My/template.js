@@ -34,8 +34,23 @@ export default {
           this.$router.push({path: `/my`, query: {page: newPage}})
         })
     },
-    onDelete () {
-      blog.deleteBlog()
+    onDelete (blogId) {
+      this.$confirm('此操作将永久删除该博客, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      })
+      .then(() => {
+        return blog.deleteBlog(blogId)
+      })
+      .then(() => {
+        this.blogs = this.blogs.filter(blog => blog.id != blogId)
+        this.$message({
+          type: 'success',
+          message: '删除成功!'
+        });
+      })
+     // blog.deleteBlog(blogId)
     }
   }
 }
