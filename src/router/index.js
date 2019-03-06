@@ -69,7 +69,7 @@ const router = new Router({
     component: () => import('@/pages/Register/template.vue')
   },
   {
-    path: '/User',
+    path: '/User/:userId',
     component: () => import('@/pages/User/template.vue')
   },
   {

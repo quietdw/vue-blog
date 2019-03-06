@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>@copyright Jiang OpenSource:github</p>
+        <p>@Copyright Jiang, OpenSource: <a href="https://github.com/quietdw/vue-blog">GitHub</a></p>
     </footer>
 </template>
 
@@ -15,5 +15,10 @@ footer {
   font-size: 13px;
   padding: 10px;
   text-align: center;
+  p {
+      a{
+          color: #333
+      }
+  }
 }
 </style>

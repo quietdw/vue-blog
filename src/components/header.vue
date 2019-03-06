@@ -18,7 +18,7 @@
             <div class="user">
                 <img :src="user.avatar" :alt="user.username">
                 <ul>
-                    <li><router-link to="my">我的</router-link></li>
+                    <li><router-link to="/my">我的</router-link></li>
                     <li><a href="#" @click="onLogout">注销</a></li>
                 </ul>
             </div>
@@ -91,6 +91,7 @@ header.login {
     }
     .user {
     position: relative;
+    margin-right: 15px;
     img {width: 40px;margin: 10px;}
     ul{
         position: absolute;

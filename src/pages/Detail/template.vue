@@ -3,7 +3,7 @@
     <div class="author">
       <img :src="user.avatar" :alt="user.username">
       <h4>{{title}}</h4>
-      <p>{{user.username}} <span>{{createdAt}}</span></p>
+      <p><router-link :to="`/user/${user.id}`" >{{user.username}}</router-link> <span>{{friendlyDate(createdAt)}}</span></p>
     </div>
     <div class="description">
       {{description}}

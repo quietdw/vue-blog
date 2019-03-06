@@ -14,12 +14,23 @@ function friendlyDate (timedata) {
   } else {
     str = Math.floor(delta / (60 * 24)) + '天前'
   }
-  console.log(str)
   return str
+}
+
+function getDate (timedata, style) {
+  let time = typeof timedata === 'object' ? timedata : new Date(timedata)
+  if (style === 'year') {
+    return time.getFullYear()
+  } else if (style === 'month') {
+    return time.getMonth()+1
+  } else if (style === 'day') {
+    return time.getDate()
+  }
 }
 
 export default {
   install (Vue, options) {
     Vue.prototype.friendlyDate = friendlyDate
+    Vue.prototype.getDate = getDate
   }
 }
