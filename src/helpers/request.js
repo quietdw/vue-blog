@@ -17,12 +17,10 @@ export default function request (url, type = 'GET', data = {}) {
       option.params = data
     } else {
       option.data = data
-      console.log(option)
     }
     axios(option).then(res => {
       if (res.data.status === 'ok') {
         resolve(res.data)
-        console.log(res.data)
       } else {
         Message.error(res.data.msg)
         reject(res.data)
