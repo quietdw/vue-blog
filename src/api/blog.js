@@ -63,7 +63,7 @@ export default {
     })
   },
   deleteBlog (blogId) {
-    return request(URL.DELETE.replace(':blogId', blogId))
+    return request(URL.DELETE.replace(':blogId', blogId),'DELETE')
   },
   createBlog ({
     title = '',
