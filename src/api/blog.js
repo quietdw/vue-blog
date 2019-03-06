@@ -55,7 +55,7 @@ export default {
     description,
     atIndex
   }) {
-    return request(URL.UPDATE.replace(':blog', blogId), 'PATCH', {
+    return request(URL.UPDATE.replace(':blogId', blogId), 'PATCH', {
       title,
       content,
       description,

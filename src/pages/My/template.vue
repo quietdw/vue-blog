@@ -15,7 +15,7 @@
        <router-link :to="`/detail/${blog.id}`">{{blog.description}}</router-link>
         <p class="edit"> 
           <el-button @click="onDelete(blog.id)" size="mini" type="danger" icon="el-icon-delete" circle></el-button>
-          <router-link :to ="`/detail/${blog.id}`"><el-button size="mini" type="primary" icon="el-icon-edit" circle></el-button></router-link>
+          <router-link :to ="`/edit/${blog.id}`"><el-button size="mini" type="primary" icon="el-icon-edit" circle></el-button></router-link>
         </p>
       </div>
       <section class="pagination-container">
