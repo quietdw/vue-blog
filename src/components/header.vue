@@ -10,11 +10,11 @@
         </template>
         <template v-if="isLogin">
             <h1><router-link to="/">Let's share</router-link></h1>
-            <span>
+            <router-link to="/create">
                 <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-edit1"></use>
+                    <use xlink:href="#icon-zengjia"></use>
                 </svg>
-            </span>
+            </router-link>
             <div class="user">
                 <img :src="user.avatar" :alt="user.username">
                 <ul>

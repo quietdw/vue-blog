@@ -3,9 +3,23 @@
 #create{
   h4 { padding-bottom: 10px;padding-top: 10px;}
   button {margin-top:10px;margin-bottom: 10px;}
+
+  .el-input.active {
+    input {
+      border-color: red;
+    }
+  }
+  .el-textarea.active1{
+    textarea{
+      border-color: red;
+    }
+  }
   .switch{padding: 5px;display: flex;align-items:center;
     div{margin-left:10px;} 
   }
   .message{text-align: right;color: @textLighterColor;}
+  .message.active,.message.active1 {
+    color: red;
+  }
 }
 
