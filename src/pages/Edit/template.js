@@ -42,7 +42,10 @@ export default {
       if (!this.isActive && !this.isActive1) {
         blog.updateBlog({blogId: this.$route.params.blogId},{title: this.title, description: this.description, content: this.content, atIndex: this.atIndex})
           .then(res => {
-            this.$message('更改成功')
+            this.$message({
+              message: '修改成功',
+              type: 'success'
+            })
             this.$router.push({path: `/detail/${res.data.id}`})
           })
       } else {
