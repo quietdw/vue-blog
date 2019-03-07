@@ -11,7 +11,8 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "upload": "cd dist; git init; git add .; git commit -am \"上传更新\"; git remote add origin git@github.com:quietdw/vue-blog-preview.git; git push -f origin master"
   },
   "dependencies": {
     "axios": "^0.18.0",
