@@ -8,7 +8,7 @@
     <p class="message" v-bind:class="{ active1: isActive1 }">限{{descriptionLength}}/100个字</p>
     <h4>内容</h4>
     <el-input  type="textarea" :rows="20" v-model="content" :autosize='{minRows:4,maxRows:20}'></el-input>
-    <p class="switch">是否展示到首页<el-switch　v-model="atIndex" active-color="#13ce66" inactive-color="#ff4949"></el-switch></p>
+    <p class="switch">是否展示到首页<el-switch　v-model="atIndex" active-color="#28a745" inactive-color="#ff4949"></el-switch></p>
     <el-button type="primary" plain @click="onSubmit">提交</el-button>
   </div>
 </template>

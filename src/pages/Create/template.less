@@ -1,25 +1,68 @@
 @import url(../../assets/base.less);
 
-#create{
-  h4 { padding-bottom: 10px;padding-top: 10px;}
-  button {margin-top:10px;margin-bottom: 10px;}
+#create {
+  h4 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .el-input__inner {
+    line-height: 20px;
+    min-height: 34px;
+    font-size: 14px;
+  }
 
   .el-input.active {
     input {
       border-color: red;
+      line-height: 20px;
+      min-height: 34px;
+      font-size: 14px;
     }
   }
-  .el-textarea.active1{
-    textarea{
+
+  .el-textarea.active1 {
+    textarea {
       border-color: red;
     }
   }
-  .switch{padding: 5px;display: flex;align-items:center;
-    div{margin-left:10px;} 
+
+  .switch {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+    div {
+      margin-left: 10px;
+    }
   }
-  .message{text-align: right;color: @textLighterColor;}
-  .message.active,.message.active1 {
+
+  .message {
+    text-align: right;
+    color: @textLighterColor;
+  }
+
+  .message.active,
+  .message.active1 {
     color: red;
   }
-}
 
+  .el-button {
+    padding:10px 12px;
+
+    border-color: transparent;
+    margin-top: 20px;
+    background: #28a745;
+    color: #fff;
+  }
+
+  .el-button:hover,
+  .el-button:active {
+    border-color: #218b3a
+  }
+}

@@ -15,7 +15,7 @@
     </template>
     <template v-if="isLogin">
       <h1>
-        <router-link to="/">Let's share</router-link>
+        <router-link to="/">Build better together</router-link>
       </h1>
       <router-link to="/create">
         <svg class="icon" aria-hidden="true">
@@ -76,14 +76,12 @@ header {
   color: #fff;
   h1 {
     font-weight: bold;
+    text-align: left;
   }
 }
 
 header.nologin {
   color: #fff;
-  h1 {
-      text-align: left;
-  }
   .btns {
       display: flex;
       justify-content: space-around;
@@ -121,36 +119,81 @@ header.login {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 0px;
   h1 {
     flex-grow: 1;
-    text-align: left;
   }
   span {
     color: #fff;
   }
   svg {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
     fill: aliceblue;
+    margin-right: 10px;
   }
   .user {
     position: relative;
     margin-right: 15px;
+     cursor: pointer;
     img {
-      width: 40px;
-      margin: 10px;
+      width: 36px;
+      height: 36px;
+      padding: 5px;
+      border-radius: 5px;
     }
+
     ul {
       position: absolute;
-      width: 100%;
-      left: 100%;
-      top: 10px;
+      z-index: 1;
+      display: none;
+      padding: 8px 0px;
+      width: 200%;
+      top: 100%;
+      right: -10px;
+      background: #fff;
+        border: 1px solid rgba(27,31,35,.15);
+        border-radius: 4px;
+        box-shadow: 0 3px 12px rgba(27,31,35,.15);
       li {
+        color: #24292e;
+        padding: 4px 10px 4px 15px;
+      }
+      li:hover{
+        background: #0366d6;
         color: #fff;
+        transition: .1;
       }
     }
+    ul::after{
+      content: '';
+      position: absolute;
+       width: 0px;
+    height: 0px;
+    border: solid transparent 6px;
+    border-bottom: solid #fff 6px;
+    left: 60%;
+    bottom:  100%;
+    }
   }
+
+  .user::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: solid transparent 4px;
+    border-top: solid #fff 4px;
+    left: 100%;
+    top: calc(50% - 2px);
+  }
+   .user:hover::after{
+     border-top: solid hsla(0,0%,100%,.7) 4px;
+   }
+   .user:hover{
+     ul{
+       display: block;
+     }
+   }
 }
 </style>
 

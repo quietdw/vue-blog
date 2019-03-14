@@ -5,7 +5,7 @@
     <h4>密码</h4>
     <input v-model="password" type="password" placeholder="请输入密码" v-on:keyup.enter="onSubmit">
     <el-button type="primary" plain v-on:click="onSubmit">登录</el-button>
-    <el-button type="primary" plain>重置</el-button>
+    <el-button type="primary" plain v-on:click="onReset">重置</el-button>
   </div>
 </template>
 

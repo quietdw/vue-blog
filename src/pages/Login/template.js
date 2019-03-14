@@ -16,6 +16,10 @@ export default {
         .then(() => {
           this.$router.push({path: this.$route.query.redirect || '/'}) // 跳转到首页
         })
+    },
+    onReset () {
+      this.username = ''
+      this.password = ''
     }
   }
 

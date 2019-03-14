@@ -6,10 +6,7 @@
     grid:auto / 80px 1fr;
     padding-bottom: 20px;
     padding-top: 20px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
     img {
-      background: red;
       grid-column: 1; 
       grid-row: 1; 
       width: 80px;
@@ -29,7 +26,8 @@
     .item{
       display: grid;
       grid:auto auto auto / 80px 1fr;
-      margin: 20px 0;
+      padding: 20px 0;
+      border-bottom: solid 1px #e1e4e8;
       .date{
         grid-column: 1; 
         grid-row: 1 / span 3; 
@@ -60,8 +58,14 @@
         line-height: 120%;      
         a {
           color: @themeLighterColor;
+          float: right;
         }
       }
     }
+  }
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
   }
 }

@@ -2,16 +2,14 @@
   <div id="index">
     <section class="bolg-post" v-for="blog in blogs">
       <div class="item">
-        <figure class="avatar">
-          <img :src="blog.user.avatar" :alt="blog.user.username">
-          <figcaption>{{blog.user.username}}</figcaption>
-        </figure>
+         <div class="avatar">
+           <img :src="blog.user.avatar" :alt="blog.user.username">
+         </div>
         <h3>
-          {{blog.title}}
-          <span>{{friendlyDate(blog.createdAt)}}</span>
+          <router-link :to="`detail/${blog.id}`"><span>{{blog.user.username}}</span>/{{blog.title}}</router-link>
         </h3>
-        <p>{{blog.description}}<router-link :to="`detail/${blog.id}`">更多</router-link></p>
-        
+        <span class="created">创建于{{friendlyDate(blog.createdAt)}}</span>
+        <p>{{blog.description}}</p>
       </div>
     </section>
     <section class="pagination-container">
